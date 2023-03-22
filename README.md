@@ -1,4 +1,7 @@
 # SFML-Airplane-Game
+Simple C++ & SFML Airplane game
+
+The goal is to dodge the asteroids using the arrow keys to move the airplane
 
 ## Installation instructions:
 
