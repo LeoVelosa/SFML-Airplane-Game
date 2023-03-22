@@ -11,17 +11,17 @@ debug: CFLAGS+=-g -Wall
 $(ODIR)/%.o: &.cpp | $(ODIR) $(DDIR)
 	$(CC) -c $< -0 $@ $(CFLAGS) -MF $(DDIR)/$(patsubst %.o,%.d,$(@F))
 
-04_Input: Game.o
+Airplane: Game.o
 	$(CC) $< -o $@ $(SFMLFLAGS)
 
 $(ODIR) $(DDIR):
 	mkdir -p $@
 
-run: 04_Input
-	./04_Input
+run: Airplane
+	./Airplane
 
-debug: clean 04_Input
-	gdb 04_Input
+debug: clean Airplane
+	gdb Airplane
 
 clean:
 	rm -f sfml-app # deprecated
